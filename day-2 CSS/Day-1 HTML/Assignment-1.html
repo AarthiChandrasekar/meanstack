@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Page</title>
+  <style>
+      label{
+        width:250px;
+        display:inline-block;
+      }
+    </style>
+  </head>
+<body>
+    <h1>Corona patient Management</h1>
+    <form action="assign-1 bu.html" method="post"> 
+
+    <Label for="fname">Name of the patient</Label>
+    <input type="text" id="fname" name="fname" autofocus maxlength="50"><br>
+    
+    <label>Gender </label>
+    Male: <input type="radio" name="sex" value="m">
+    <br>
+
+    <label>Location</label>
+    <input type="text" name="location" value="Bengaluru">
+    <br>
+
+    <Label>Pincode</Label>
+    <input type="text" id="pin" name="pin" maxlength="6" size="6"><br>
+
+    <Label>Aadhar no</Label>
+    <input type="text" id="aadhar" name="aadhar"maxlength="10" size="10"><br>
+    
+    <Label>Enter your mobile</Label>
+    <input type="text" id="mobile" name="mobile" maxlength="10" size="10"><br>
+    <Label>Attendee Name</Label>
+    <input type="text" id="attendee name" name="attendee name"><br>
+
+        <label for="Appointment DATE">Date and time of request</label>
+        <input type="datetime-local" id="Appointment DATE" name="Appointment DATE">
+      <br>
+        <label for="vol">SPO2 level (between 0 and 100):</label>
+        <input type="range" id="vol" name="vol" min="0" max="100"><br>
+      
+      <label>Type of Hospital</label>
+      <select id="type">
+          <option value="govt">Govt</option>
+          <option value="private">Private</option>
+          <option value="carecentre">CareCentre</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
+

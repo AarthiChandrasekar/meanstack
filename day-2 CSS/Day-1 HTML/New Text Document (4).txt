@@ -1,0 +1,25 @@
+<!DOCTYPEhtml>
+<htmllang="en">
+<head>
+<metacharset="UTF-8">
+<metahttp-equiv="X-UA-Compatible"content="IE=edge">
+<metaname="viewport"content="width=device-width, initial-scale=1.0">
+<title>Multi Media</title>
+</head>
+<body>
+<h1>Youtube video</h1>
+<iframewidth="560"height="315"src="https://www.youtube.com/embed/MDtQ4VdGZqg"title="YouTube video player"frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+<h1>Other Video</h1>
+<videowidth="400"controls>
+<sourcesrc="cycling.mp4"type="video/mp4">
+<sourcesrc="cycling.ogg"type="video/ogg">
+        Your browser does not support HTML video.
+</video>
+<h1>Audio</h1>
+<audiocontrols>
+<sourcesrc="rangbarse.mp3"type="audio/mpeg">
+      Your browser does not support the audio element.
+</audio>
+</body>
+</html>
+

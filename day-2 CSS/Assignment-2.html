@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h2{
+            color: white;
+            background-color: blue;
+            width:50%;
+        }
+        
+        table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+th{
+            color: white;
+            background-color: blue;
+        }
+       
+th, td {
+  padding: 15px;
+}
+            table, td, th {
+              border: 1px solid black;
+            }
+            
+            table {
+              border-collapse: collapse;
+              width: 50%;
+            }
+            
+            th {
+                color:white;
+                background-color: brown;
+              
+            }
+            #hid{
+                color: red;
+            background-color: yellow;
+        }
+        /** class selector**/
+        .mycls{
+            color: brown;
+            background-color: white;
+        }
+        .bg{
+            color: white;
+            background-color: red;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+           </style>
+            </head>
+            <body>
+            
+            <h2>MEDAL TALLY</h2>
+            <div style="overflow-y:auto;"></div>
+            <table>
+              <tr>
+                <th></th>
+                <th>Country</th>
+
+                <th id="hid"><span class="badge">1</span></th>
+
+                <div class="mycs"></div>
+                <th class="mycls"> <span class="badge">2</span></th>
+                <th> <span class="badge">3</span></th>
+                <th class="mycls bg">T</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Japan</td>
+                <td>10</td>
+                <td>3</td>
+                <td>5</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>USA</td>
+                <td>9</td>
+                <td>8</td>
+                <td>8</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>China</td>
+                <td>9</td>
+                <td>5</td>
+                <td>7</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>ROC</td>
+                <td>7</td>
+                <td>7</td>
+                <td>4</td>
+                <td>18</td>
+              </tr>
+            </div>
+            </table>
+            
+            </body>
+            </html>
+            

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+        <h1 style="background-color:rgb(206, 255, 71);">Weather info</h1>
+        <label>Enter Location</label>
+        <input type="text" id = "locationval">
+         
+      
+<div class="container"id="weatherDetails">
+ 
+</div>
+
+
+        <script>
+                weatherDetails=[];
+                function getWeatherDetails(){
+    var location = document.getElementById("locationVal").value;
+ 
+    var url = "https://api.openweathermap.org/data/2.5/"
+           + "weather?q="+location+"&appid=5e009c94f49d379f63bd20ad81cc038e&units=metric";
+ 
+    fetch(url)
+     .then(response => response.json())
+     
+     .then(json=>displayWeather(json))
+
+}
+               
+                function displayWeather(jsondata){
+                    
+                    weatherDetails = jsondata;
+                    console.log('displayData::',weatherDetails);
+                    //var data="<tr><td>Lat</td><td>Lon</td><td>temp</td><td>pressure</td><td>Humidity</td><td>wind</td></tr>";
+                    //for (i=0;i<todos.length;i++){
+                      //  data=data+`<tr><td>${todos[i].lat}</td><td>${todos[i].lon}</td><td>${todos[i].temp}</td><td>${todos[i].pressure}</td><td>${todos[i].Humidity}</td>
+                        //<td>${todos[i].wind}</td>}`;
+                        var data = "<h1 class='text-center alert alert-success'>Weather Info</h1>";
+
+                      data = data + `<div class='container alert alert-info'>`
+                     + `<div class='row'>`
+                    + `<div class="col-sm-6">`
+                     + `<label> Coord Lon:</label>${weatherDetails.coord.lon}`
+ + `</div><div class="col-sm-6">`
+ + `<label> Coord lat:</label>${weatherDetails.coord.lat}`
+ + `</div><div class='row'><div class="col-sm-3">`
+ + `<label> Temp:</label>${weatherDetails.main.temp}`
+ + `</div><div class="col-sm-3">`
+ + `<br><label> Pressure:</label>${weatherDetails.main.pressure}`
+ + `</div><div class="col-sm-3">`
+ + `<br><label> Humidity:</label>${weatherDetails.main.humidity}`
+ + `</div><div class="col-sm-3">`
+ + `<br><label> Wind:</label>${weatherDetails.wind.speed}`
+ + `</div></div></div></div>`;
+ 
+document.getElementById("weatherDetails").innerHTML = data;
+ }
+                   
+                   </script>
+</body>
+</html>
+<!--
+<label>Location</label>
+<select id="location">
+        <option value="bng">Bengaluru</option>
+        <option value="chn">Chennai</option>
+        <option value="hyd">Mumbai</option>
+    </select>
+<Label>Latitude</Label>
+<type="text" id="lat" name="lon">
+<input Label>Longitude</Label>
+<type="text" id="lon" name="lon"><br>
+<Label>Latitude</Label>
+<input type="text" id="lat" name="lon">
+<Label>Longitude</Label>
+<input type="text" id="lon" name="lon"><br>
+      -->

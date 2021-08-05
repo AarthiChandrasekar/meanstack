@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+
+<body>
+
+<h1>Olympics</h1>
+<img src="olympics.jpg" alt=""
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+    <title>Weather App</title>
+</head>
+ 
+<body>
+        <div class="container">
+                <div class="jumbotron">
+                    <h2 class="text-center">OPEN WEATHER APP</h2>
+                </div>
+             </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label>Location: </label>
+                <input type="text" id="locationVal">
+            </div>
+            <div class="col-sm-8">
+                <button type="submit" onclick="showDetails()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="weatherDetails">
+ 
+    </div>
+    <script>
+        weatherDetails = [];
+ 
+        function showDetails() {
+ 
+            var location = document.getElementById("locationVal").value;
+            
+            var url = "https://api.openweathermap.org/data/2.5/" +
+                "weather?q=" + location + "&appid=5e009c94f49d379f63bd20ad81cc038e&units=metric";
+            //console
+            fetch(url)
+                .then(response => response.json())
+                
+                .then(json => displayWeather(json))
+ 
+        }
+ 
+        function displayWeather(jsondata) {
+            weatherDetails = jsondata;
+            console.log('displayData::', weatherDetails);
+            var cdata = "<h1>Weather Info</h1>";
+            //data=data+`<tr><td>${todos[i].id}</td><td>${todos[i].title}</td><td>${todos[i].completed}</td></tr>`;
+ 
+            cdata = cdata +
+               `<label> Coord Lon:</label>${weatherDetails.coord.lon}` +
+               
+                `<label> Coord lat:</label>${weatherDetails.coord.lat}` +
+               
+                `<label> Temp:</label>${weatherDetails.main.temp}` +
+               
+                `<label> Pressure:</label>${weatherDetails.main.pressure}` +
+               
+                `<label> Humidity:</label>${weatherDetails.main.humidity}` +
+               
+                `<label> Wind:</label>${weatherDetails.wind.speed}` +
+               
+ 
+ 
+            console.log('location::', cdata);
+            document.getElementById("weatherDetails").innerHTML = cdata;
+        }
+    </script>
+</body>
+ 
+</html>

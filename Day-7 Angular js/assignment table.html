@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Corona dashboard</title>
+</head>
+<h1>Corona dashboard</h1>
+<!--<body ng-app="" ng-init="peoples=[  -->
+    <label>Name:</label>
+      <input type="text"  id="name" ng-model="name" placeholder="Enter a name here"><br>
+      <label>Total</label>
+      <input type="text" id="total" ng-model="total" placeholder="Enter total"><br>
+      <label>Active</label>
+      <input type="text" id="active" ng-model="active" placeholder="Enter active "><br>
+      <label>Recovered</label>
+      <input type="text" id="recovered" ng-model="recovered" placeholder="Enter recovered"><br>
+      <label>Dead</label>
+      <input type="text" id="dead" ng-model="dead" placeholder="Enter dead"><br>
+      <hr>
+      <button id="add" onclick="submit()">Submit</button><br>
+      
+  <!--   ]">      -->
+
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Total</th>
+            <th>Active</th>
+            <th>Recovered</th>
+            <th>Dead</th>
+            
+
+         </tr>   
+          
+   <!-- <tr ng-repeat="pep in peoples">   -->
+   
+      
+    <td>{{name}}</td>
+    <td>{{total}}</td>
+    <td>{{active}}</td>
+    <td>{{recovered}}</td>
+    <td>{{dead}}</td>
+</tr>
+</table>
+    <script>
+
+function submit() {
+           
+            
+            Name = document.getElementById('name').value;
+             Total= document.getElementById('total').value;
+            Active = document.getElementById('active').value;
+            Recovered = document.getElementById('recovered').value;
+            Dead = document.getElementById('dead').value;
+            //newtodo = {'id':id,'title':title,'userId':userId,'status':status};
+            console.log(Name+""+Total+""+Active+""+Recovered+""+Dead);
+           // console.log(city, '-', company)
+    </script>
+</body>
+</html>
+
+
+
+<!--
+    <label>State Name:</label>
+      <input type="text" id="state name" ng-model="state name" placeholder="Enter state name "><br>
+      <label>Total</label>  
+      <input type="text" id="total" ng-model="total" placeholder="Enter total"><br>
+      <label>Active:</label>
+      <input type="text" id="active" ng-model="active" placeholder="active"><br>
+      
+      <label>Recovered:</label>
+      <input type="text" id="recovered" ng-model="recovered" placeholder="recovered"><br>
+      <label>dead:</label>
+      <input type="text" id="dead" ng-model="dead" placeholder="dead"><br>
+      <hr>
+      
+-->

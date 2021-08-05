@@ -1,0 +1,44 @@
+
+<!DOCTYPEhtml>
+<htmllang="en">
+<head>
+<metacharset="UTF-8">
+<metahttp-equiv="X-UA-Compatible"content="IE=edge">
+<metaname="viewport"content="width=device-width, initial-scale=1.0">
+<title>Elements-2</title>
+</head>
+<body>
+ 
+<h1>Elements</h1>
+ 
+<Label>Enter your name</Label>
+<inputtype="text"id="name"name="name"><br>
+<Label>Enter your email</Label>
+<inputtype="text"id="email"name="email"><br>
+<Label>Enter your mobile</Label>
+<inputtype="text"id="mobile"name="mobile"><br>
+<!-- Radio button-->
+<label>Sex </label>
+    Male: <inputtype="radio"name="sex"value="m">
+    Female: <inputtype="radio"name="sex"value="f">
+    Others: <inputtype="radio"name="sex"value="o">
+<br>
+<!-- Checkbox-->
+<label>Education</label>
+    UG: <inputtype="checkbox"name="ug"value="ug">
+    PG: <inputtype="checkbox"name="pg"value="pg">
+Diplomo: <inputtype="checkbox"name="Diplomo"value="Diplomo">
+    Others: <inputtype="checkbox"name="oth"value="o">
+<br>
+<!-- Selct-->
+<label>Location</label>
+<selectid="location">
+<optionvalue="bng">Bengaluru</option>
+<optionvalue="chn">Chennai</option>
+<optionvalue="hyd">Mumbai</option>
+</select>
+<br>
+<inputtype="submit"value="register">
+</body>
+</html>
+
